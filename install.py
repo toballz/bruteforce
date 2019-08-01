@@ -3,7 +3,7 @@ import os
 d = os.path.dirname(os.path.abspath(__file__))
 
 os.system("chmod +x bru")
-if os.path.isfile("/usr/local/bin/brute"):
+if os.path.exists("/usr/local/bin/brute"):
  print("Writing.....")
 else:
   os.system("sudo mkdir /usr/local/bin/brute")
