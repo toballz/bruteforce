@@ -1,10 +1,9 @@
 import os
 
 d = os.path.dirname(os.path.abspath(__file__))
-p = Path("/usr/local/bin/brute")
 
 os.system("chmod +x bru")
-if p.is_file():
+if os.path.isfile("/usr/local/bin/brute"):
  print("Writing.....")
 else:
   os.system("sudo mkdir /usr/local/bin/brute")
