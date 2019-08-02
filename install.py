@@ -11,5 +11,5 @@ else:
 os.system("sudo mv "+d+"/bru /usr/local/bin")
 os.system("sudo mv "+d+"/psw.txt /usr/local/bin/brute")
 os.system("sudo ln -s /usr/local/bin/brute/psw.txt "+d)
-os.system("sudo ln -s /usr/local/bin/brute/bru "+d)
+os.system("sudo ln -s /usr/local/bin/bru "+d)
 print "BruteForce Installation Successfull.\nYou can access the file by typing bru from any directory"
