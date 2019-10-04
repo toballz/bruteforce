@@ -1,9 +1,15 @@
-"'"
+ï»¿
+¿
+\"'"
+¯
+ª
 '"'
-"'
+"'"
 '"
 "
 '
+¬
+Š
 'or''='
 " or true--
 " or ""="
@@ -58,6 +64,9 @@ ADMIN
 ABC123
 stimiamo@acquaintance70.tk
 abc123
+toballz!@#
+toballz0199
+toballz0199,
 aaaaaaaa
 AAAAAAAA
 LEONARDO
@@ -66,16 +75,37 @@ leonardo
 thats wassup
 aaaaaaa
 123
+toballz
 ‰
  
+•
 ␜
 ␞
 ␟
 ␝
 »
+Õ
+`
+Û
+
+À
+ˆ
+Í
+ã
+ì
+ÿ
+ü
+Ê
+œ
+Æ
+µ
 «
-
 ", '
+†
+ë
+ž
+¨
+ª†¨žë«µÆœÊüìã•
 / \
 0x00
 \u200C
@@ -85,6 +115,15 @@ aaaaaaa
 &zwnj;
 \x09
 \0
+�
+
+ð
+ø
+þ
+”
+Ð
+¼
+€
 \'
 \"
 \b
@@ -94,6 +133,10 @@ aaaaaaa
 //
 \%
 \Z
+¶
+Õ
+Ê
+Þ
 <?php
 ?>
 <?
@@ -131,9 +174,14 @@ $#)$^&@!
 !@#$%12345
 !@#$%
 !1251llm
+¤
+p
+°
+·
+Ø
 xCvBnM,
-ie168
-abygurl69
+’
+“
 a6_123
 *7¡Vamos!
 ~
