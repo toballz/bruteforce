@@ -2,7 +2,9 @@
 Crack passwords for vulnerable webites
 
 
-# How To Install
-sudo git clone https://github.com/toballz/bruteforce
-<p>cd bruteforce</p>
-<p>sudo python install.py</p>
+# use
+
+	-pwd password list
+	-url target url
+	-data parameters help='name=value&password=^pwd^'
+	-w opposite response
